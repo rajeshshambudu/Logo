@@ -1,138 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Refined Logo SVG</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DL Logo Refined</title>
 
-  <style>
-    :root {
-      --blue: #2f5b8f;
-      --dark: #1f1f1f;
-      --red: #7a2b24;
-      --ring: #1f3f66;
-    }
+<style>
+  :root {
+    --blue: #2c4f7a;
+    --blue-dark: #1e3a5a;
+    --red: #7b2a24;
+    --red-dark: #5e1f1a;
+    --black: #1a1a1a;
+  }
 
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f4f6f8;
-      font-family: Arial, sans-serif;
-    }
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef1f4;
+  }
 
-    .logo-container {
-      width: 90vw;
-      max-width: 420px;
-      aspect-ratio: 1/1;
-    }
+  .logo {
+    width: 90vw;
+    max-width: 420px;
+  }
 
-    svg {
-      width: 100%;
-      height: 100%;
-    }
+  svg {
+    width: 100%;
+    height: auto;
+  }
 
-    /* Subtle premium polish */
-    .shadow {
-      filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.12));
-    }
-
-    .gloss {
-      opacity: 0.08;
-    }
-
-  </style>
+  .shadow {
+    filter: drop-shadow(0 8px 18px rgba(0,0,0,0.15));
+  }
+</style>
 </head>
+
 <body>
 
-<div class="logo-container">
-  <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<div class="logo">
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
 
-    <!-- Outer Circular Ring -->
-    <circle cx="250" cy="250" r="220"
-      fill="none"
-      stroke="url(#ringGradient)"
-      stroke-width="24"
-      class="shadow"
-    />
+  <!-- Outer Ring -->
+  <circle cx="250" cy="250" r="215"
+    fill="none"
+    stroke="var(--blue)"
+    stroke-width="22"
+    class="shadow"/>
 
-    <!-- Subtle Inner Stroke -->
-    <circle cx="250" cy="250" r="200"
-      fill="none"
-      stroke="#ffffff"
-      stroke-opacity="0.6"
-      stroke-width="3"
-    />
+  <!-- Inner Circle -->
+  <circle cx="250" cy="250" r="190"
+    fill="#ffffff"/>
 
-    <!-- Abstract L Shape -->
-    <path
-      d="M140 130 L140 370 L260 370 L260 320 L190 320 L190 130 Z"
-      fill="url(#redGradient)"
-      class="shadow"
-    />
+  <!-- LEFT L SHAPE -->
+  <path d="
+    M150 130
+    L150 370
+    L260 370
+    L260 315
+    L205 315
+    L205 130
+    Z"
+    fill="url(#redGrad)"
+  />
 
-    <!-- Blue Arrow Frame -->
-    <path
-      d="M160 150 
-         L300 150 
-         L420 250 
-         L300 350 
-         L300 310 
-         L370 250 
-         L300 190 
-         L220 190 
-         Z"
-      fill="url(#blueGradient)"
-      class="shadow"
-    />
+  <!-- TOP DARK SLAB -->
+  <path d="
+    M150 130
+    L300 130
+    L370 180
+    L220 180
+    Z"
+    fill="url(#darkGrad)"
+  />
 
-    <!-- Inner Dark Arrow -->
-    <path
-      d="M260 230 L340 250 L260 290 Z"
-      fill="url(#darkGradient)"
-    />
+  <!-- BLUE D SHAPE (RIGHT FRAME) -->
+  <path d="
+    M220 180
+    L300 180
+    L400 250
+    L300 320
+    L300 280
+    L350 250
+    L300 220
+    L220 220
+    Z"
+    fill="url(#blueGrad)"
+  />
 
-    <!-- Top Dark Edge -->
-    <path
-      d="M140 130 L300 130 L380 190 L300 190 Z"
-      fill="url(#darkGradient)"
-      opacity="0.9"
-    />
+  <!-- INNER PLAY TRIANGLE -->
+  <path d="
+    M260 215
+    L330 250
+    L260 285
+    Z"
+    fill="var(--black)"
+  />
 
-    <!-- Gloss Highlight -->
-    <ellipse cx="220" cy="160" rx="140" ry="60"
-      fill="#ffffff"
-      class="gloss"
-    />
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b6aa3"/>
+      <stop offset="100%" stop-color="#244c78"/>
+    </linearGradient>
 
-    <!-- Gradients -->
-    <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8c332d"/>
+      <stop offset="100%" stop-color="#6a221c"/>
+    </linearGradient>
 
-      <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#3d6fa8"/>
-        <stop offset="100%" stop-color="#244c78"/>
-      </linearGradient>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b2b2b"/>
+      <stop offset="100%" stop-color="#111"/>
+    </linearGradient>
+  </defs>
 
-      <linearGradient id="redGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#8e332c"/>
-        <stop offset="100%" stop-color="#6a221d"/>
-      </linearGradient>
-
-      <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#2e2e2e"/>
-        <stop offset="100%" stop-color="#111111"/>
-      </linearGradient>
-
-      <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#2a4f7c"/>
-        <stop offset="100%" stop-color="#163454"/>
-      </linearGradient>
-
-    </defs>
-
-  </svg>
+</svg>
 </div>
 
 </body>
