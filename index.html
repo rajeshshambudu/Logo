@@ -1,39 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DL Logo Exact</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>DL Logo - SVG Reconstruction</title>
 
 <style>
   body {
     margin: 0;
-    background: #e6e6e6;
+    background: #f2f2f2;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
   }
 
   .logo {
     width: 90vw;
-    max-width: 500px;
+    max-width: 520px;
   }
 
   svg {
     width: 100%;
     height: auto;
   }
-
-  /* Colors (matched visually) */
-  .ring { fill: #213f63; }
-  .ring-inner { fill: #ffffff; }
-  .stroke-white { stroke: #ffffff; stroke-width: 6; }
-
-  .red { fill: #7a2b24; }
-  .blue { fill: #2f5483; }
-  .dark { fill: #222222; }
-
 </style>
 </head>
 
@@ -42,55 +32,75 @@
 <div class="logo">
 <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
 
-  <!-- OUTER BLUE RING -->
-  <circle cx="300" cy="300" r="270" class="ring"/>
+  <!-- Outer blue ring -->
+  <circle cx="300" cy="300" r="270" fill="#1f3f66"/>
 
-  <!-- INNER WHITE BASE -->
-  <circle cx="300" cy="300" r="250" class="ring-inner"/>
+  <!-- Inner white circle -->
+  <circle cx="300" cy="300" r="250" fill="#ffffff"/>
 
-  <!-- LEFT ARC CUT (to mimic original gap style) -->
+  <!-- Left curved cut (arc effect) -->
   <path d="
     M300 30
     A270 270 0 0 0 80 300
     A250 250 0 0 1 300 50
     Z" fill="#ffffff"/>
 
-  <!-- RED L SHAPE -->
-  <path class="red stroke-white" d="
-    M140 140
-    L140 440
-    L280 440
-    L280 370
-    L200 370
-    L200 140
-    Z"/>
+  <!-- Red L shape -->
+  <path d="
+    M150 140
+    L150 450
+    L290 450
+    L290 370
+    L210 370
+    L210 140
+    Z"
+    fill="#7a2b24"
+    stroke="#ffffff"
+    stroke-width="6"
+    stroke-linejoin="round"
+  />
 
-  <!-- TOP DARK SLANTED BAR -->
-  <path class="dark stroke-white" d="
-    M140 140
-    L310 140
-    L470 250
-    L300 250
-    Z"/>
+  <!-- Top dark slab -->
+  <path d="
+    M150 140
+    L330 140
+    L500 260
+    L320 260
+    Z"
+    fill="#2a2a2a"
+    stroke="#ffffff"
+    stroke-width="6"
+    stroke-linejoin="round"
+  />
 
-  <!-- BLUE RIGHT ARROW FRAME -->
-  <path class="blue stroke-white" d="
-    M200 200
-    L320 200
-    L520 350
-    L320 500
-    L320 420
-    L420 350
-    L320 280
-    L200 280
-    Z"/>
+  <!-- Blue angular D shape -->
+  <path d="
+    M220 210
+    L340 210
+    L540 350
+    L340 520
+    L340 420
+    L440 350
+    L340 290
+    L220 290
+    Z"
+    fill="#2f5483"
+    stroke="#ffffff"
+    stroke-width="6"
+    stroke-linejoin="round"
+  />
 
-  <!-- INNER DARK PLAY TRIANGLE -->
-  <path class="dark stroke-white" d="
+  <!-- Inner dark play arrow -->
+  <path d="
     M300 300
-    L400 350
-    L300 400
-    Z"/>
+    L420 350
+    L300 420
+    Z"
+    fill="#222222"
+    stroke="#ffffff"
+    stroke-width="6"
+    stroke-linejoin="round"
+  />
 
 </svg>
 </div>
